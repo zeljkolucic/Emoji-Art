@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct EmojiArtDocumentView: View {
+    typealias Emoji = EmojiArt.Emoji
+    
     @ObservedObject var document: EmojiArtDocument
     
     private let emojis = "👻🍎😃🤪☹️🤯🐶🐭🦁🐵🦆🐝🐢🐄🐖🌲🌴🌵🍄🌞🌎🔥🌈🌧️🌨️☁️⛄️⛳️🚗🚙🚓🚲🛺🏍️🚘✈️🛩️🚀🚁🏰🏠❤️💤⛵️"
@@ -28,6 +30,8 @@ struct EmojiArtDocumentView: View {
         GeometryReader { geometry in
             ZStack {
                 Color.white
+                AsyncImage(url: document.background)
+                    .position(Emoji.Position(x: 0, y: 0).in(geometry))
                 ForEach(document.emojis) { emoji in
                     Text(emoji.string)
                         .font(emoji.font)
