@@ -11,6 +11,7 @@
 		E46EF2F72B3610B200CDA3FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46EF2F62B3610B200CDA3FE /* ContentView.swift */; };
 		E46EF2F92B3610B300CDA3FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E46EF2F82B3610B300CDA3FE /* Assets.xcassets */; };
 		E46EF2FC2B3610B300CDA3FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E46EF2FB2B3610B300CDA3FE /* Preview Assets.xcassets */; };
+		E46EF3032B36111400CDA3FE /* EmojiArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46EF3022B36111400CDA3FE /* EmojiArt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		E46EF2F62B3610B200CDA3FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E46EF2F82B3610B300CDA3FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E46EF2FB2B3610B300CDA3FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E46EF3022B36111400CDA3FE /* EmojiArt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiArt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				E46EF2F42B3610B200CDA3FE /* Emoji_ArtApp.swift */,
 				E46EF2F62B3610B200CDA3FE /* ContentView.swift */,
+				E46EF3022B36111400CDA3FE /* EmojiArt.swift */,
 				E46EF2F82B3610B300CDA3FE /* Assets.xcassets */,
 				E46EF2FA2B3610B300CDA3FE /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E46EF3032B36111400CDA3FE /* EmojiArt.swift in Sources */,
 				E46EF2F72B3610B200CDA3FE /* ContentView.swift in Sources */,
 				E46EF2F52B3610B200CDA3FE /* Emoji_ArtApp.swift in Sources */,
 			);
