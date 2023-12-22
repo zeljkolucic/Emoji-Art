@@ -9,9 +9,18 @@ import Foundation
 
 struct EmojiArt {
     var background: URL?
-    var emojis = [Emoji]()
+    private(set) var emojis = [Emoji]()
     
-    struct Emoji {
+    mutating func addEmoji(_ emoji: String, at position: Emoji.Position, size: Int) {
+        emojis.append(Emoji(
+            string: emoji,
+            position: position,
+            size: size
+        ))
+    }
+    
+    struct Emoji: Identifiable {
+        let id = UUID()
         let string: String
         var position: Position
         var size: Int
