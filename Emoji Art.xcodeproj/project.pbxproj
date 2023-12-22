@@ -14,6 +14,7 @@
 		E46EF3032B36111400CDA3FE /* EmojiArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46EF3022B36111400CDA3FE /* EmojiArt.swift */; };
 		E46EF3052B3611F700CDA3FE /* EmojiArtDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46EF3042B3611F700CDA3FE /* EmojiArtDocument.swift */; };
 		E46EF3072B36132D00CDA3FE /* EmojiArtDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46EF3062B36132D00CDA3FE /* EmojiArtDocumentView.swift */; };
+		E46EF3092B3615A900CDA3FE /* String+uniqued.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46EF3082B3615A900CDA3FE /* String+uniqued.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		E46EF3022B36111400CDA3FE /* EmojiArt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiArt.swift; sourceTree = "<group>"; };
 		E46EF3042B3611F700CDA3FE /* EmojiArtDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiArtDocument.swift; sourceTree = "<group>"; };
 		E46EF3062B36132D00CDA3FE /* EmojiArtDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiArtDocumentView.swift; sourceTree = "<group>"; };
+		E46EF3082B3615A900CDA3FE /* String+uniqued.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+uniqued.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				E46EF3022B36111400CDA3FE /* EmojiArt.swift */,
 				E46EF3042B3611F700CDA3FE /* EmojiArtDocument.swift */,
 				E46EF3062B36132D00CDA3FE /* EmojiArtDocumentView.swift */,
+				E46EF3082B3615A900CDA3FE /* String+uniqued.swift */,
 				E46EF2F82B3610B300CDA3FE /* Assets.xcassets */,
 				E46EF2FA2B3610B300CDA3FE /* Preview Content */,
 			);
@@ -150,6 +153,7 @@
 				E46EF3032B36111400CDA3FE /* EmojiArt.swift in Sources */,
 				E46EF2F72B3610B200CDA3FE /* ContentView.swift in Sources */,
 				E46EF2F52B3610B200CDA3FE /* Emoji_ArtApp.swift in Sources */,
+				E46EF3092B3615A900CDA3FE /* String+uniqued.swift in Sources */,
 				E46EF3052B3611F700CDA3FE /* EmojiArtDocument.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

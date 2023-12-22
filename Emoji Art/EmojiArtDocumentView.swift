@@ -36,16 +36,6 @@ struct ScrollingEmojis: View {
     }
 }
 
-extension String {
-    var uniqued: String {
-        reduce(into: "") { partialResult, element in
-            if !partialResult.contains(element) {
-                partialResult.append(element)
-            }
-        }
-    }
-}
-
 #Preview {
     EmojiArtDocumentView()
 }
