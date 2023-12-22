@@ -31,7 +31,7 @@ struct EmojiArtDocumentView: View {
             ZStack {
                 Color.white
                 AsyncImage(url: document.background)
-                    .position(Emoji.Position(x: 0, y: 0).in(geometry))
+                    .position(Emoji.Position.zero.in(geometry))
                 ForEach(document.emojis) { emoji in
                     Text(emoji.string)
                         .font(emoji.font)
