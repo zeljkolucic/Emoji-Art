@@ -35,7 +35,7 @@ struct EmojiArtDocumentView: View {
                     .offset(pan)
                     
             }
-            .gesture(zoomGesture)
+            .gesture(panGesture.simultaneously(with: zoomGesture))
             .dropDestination(for: Sturldata.self) { sturldatas, location in
                 return drop(sturldatas, at: location, in: geometry)
             }
@@ -54,6 +54,13 @@ struct EmojiArtDocumentView: View {
             }
             .onEnded { endingPinchScale in
                 zoom *= endingPinchScale
+            }
+    }
+    
+    private var panGesture: some Gesture {
+        DragGesture()
+            .onEnded { value in 
+                pan += value.translation
             }
     }
     
