@@ -32,8 +32,7 @@ struct EmojiArtDocumentView: View {
                 Color.white
                 documentContents(in: geometry)
                     .scaleEffect(zoom * gestureZoom)
-                    .offset(pan)
-                    
+                    .offset(pan + gesturePan)
             }
             .gesture(panGesture.simultaneously(with: zoomGesture))
             .dropDestination(for: Sturldata.self) { sturldatas, location in
@@ -46,6 +45,7 @@ struct EmojiArtDocumentView: View {
     @State private var pan: CGOffset = .zero
     
     @GestureState private var gestureZoom: CGFloat = 1
+    @GestureState private var gesturePan: CGOffset = .zero
     
     private var zoomGesture: some Gesture {
         MagnificationGesture()
@@ -59,7 +59,10 @@ struct EmojiArtDocumentView: View {
     
     private var panGesture: some Gesture {
         DragGesture()
-            .onEnded { value in 
+            .updating($gesturePan) { value, gesturePan, _ in
+                gesturePan = value.translation
+            }
+            .onEnded { value in
                 pan += value.translation
             }
     }
