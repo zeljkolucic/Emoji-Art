@@ -19,12 +19,16 @@ struct PaletteChooser: View {
     }
     
     var chooser: some View {
-        Button {
-            withAnimation {
-                store.cursorIndex += 1
+        AnimatedActionButton(systemImage: "paintpalette") {
+            store.cursorIndex += 1
+        }
+        .contextMenu {
+            AnimatedActionButton("New", systemImage: "plus") {
+                store.insert(name: "Math", emojis: "÷∓ℏℇ∄∅")
             }
-        } label: {
-            Image(systemName: "paintpalette")
+            AnimatedActionButton("Delete", systemImage: "minus.circle", role: .destructive) {
+                store.palettes.remove(at: store.cursorIndex)
+            }
         }
     }
     

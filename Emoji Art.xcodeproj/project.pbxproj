@@ -21,6 +21,7 @@
 		E48076CC2B36E4FB00B2FFDA /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48076CB2B36E4FB00B2FFDA /* Palette.swift */; };
 		E48076CE2B36E60000B2FFDA /* PaletteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48076CD2B36E60000B2FFDA /* PaletteStore.swift */; };
 		E48076D22B36E89300B2FFDA /* PaletteChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48076D12B36E89300B2FFDA /* PaletteChooser.swift */; };
+		E48076D42B36EBCF00B2FFDA /* AnimatedActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48076D32B36EBCF00B2FFDA /* AnimatedActionButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		E48076CB2B36E4FB00B2FFDA /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
 		E48076CD2B36E60000B2FFDA /* PaletteStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteStore.swift; sourceTree = "<group>"; };
 		E48076D12B36E89300B2FFDA /* PaletteChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteChooser.swift; sourceTree = "<group>"; };
+		E48076D32B36EBCF00B2FFDA /* AnimatedActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedActionButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				E48076CB2B36E4FB00B2FFDA /* Palette.swift */,
 				E48076CD2B36E60000B2FFDA /* PaletteStore.swift */,
 				E48076D12B36E89300B2FFDA /* PaletteChooser.swift */,
+				E48076D32B36EBCF00B2FFDA /* AnimatedActionButton.swift */,
 				E48076C92B36E1D600B2FFDA /* CGOffset+.swift */,
 				E46EF3082B3615A900CDA3FE /* String+uniqued.swift */,
 				E46EF30C2B36210B00CDA3FE /* Sturldata.swift */,
@@ -179,6 +182,7 @@
 				E48076CE2B36E60000B2FFDA /* PaletteStore.swift in Sources */,
 				E46EF30B2B361A8C00CDA3FE /* CGRect+center.swift in Sources */,
 				E48076CA2B36E1D600B2FFDA /* CGOffset+.swift in Sources */,
+				E48076D42B36EBCF00B2FFDA /* AnimatedActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
