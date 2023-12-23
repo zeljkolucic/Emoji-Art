@@ -15,11 +15,14 @@ struct PaletteChooser: View {
             chooser
             view(for: store.palettes[store.cursorIndex])
         }
+        .clipped()
     }
     
     var chooser: some View {
         Button {
-            store.cursorIndex += 1
+            withAnimation {
+                store.cursorIndex += 1
+            }
         } label: {
             Image(systemName: "paintpalette")
         }
@@ -30,6 +33,8 @@ struct PaletteChooser: View {
             Text(palette.name)
             ScrollingEmojis(palette.emojis)
         }
+        .id(palette.id)
+        .transition(.asymmetric(insertion: .move(edge: .bottom), removal: .move(edge: .top)))
     }
 }
 
