@@ -9,10 +9,14 @@ import SwiftUI
 
 struct PaletteChooser: View {
     @EnvironmentObject var store: PaletteStore
+    @State private var showPaletteEditor = false
     
     var body: some View {
         HStack {
             chooser
+                .popover(isPresented: $showPaletteEditor) {
+                    PaletteEditor()
+                }
             view(for: store.palettes[store.cursorIndex])
         }
         .clipped()
@@ -29,6 +33,9 @@ struct PaletteChooser: View {
             }
             AnimatedActionButton("Delete", systemImage: "minus.circle", role: .destructive) {
                 store.palettes.remove(at: store.cursorIndex)
+            }
+            AnimatedActionButton("Edit", systemImage: "pencil") {
+                showPaletteEditor = true
             }
         }
     }
