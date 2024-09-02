@@ -22,6 +22,7 @@
 		E48076D22B36E89300B2FFDA /* PaletteChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48076D12B36E89300B2FFDA /* PaletteChooser.swift */; };
 		E48076D42B36EBCF00B2FFDA /* AnimatedActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48076D32B36EBCF00B2FFDA /* AnimatedActionButton.swift */; };
 		E49002642C865F57006DD1DE /* PaletteEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49002632C865F57006DD1DE /* PaletteEditor.swift */; };
+		E49002662C86645F006DD1DE /* Character+isEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49002652C86645F006DD1DE /* Character+isEmoji.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		E48076D12B36E89300B2FFDA /* PaletteChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteChooser.swift; sourceTree = "<group>"; };
 		E48076D32B36EBCF00B2FFDA /* AnimatedActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedActionButton.swift; sourceTree = "<group>"; };
 		E49002632C865F57006DD1DE /* PaletteEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteEditor.swift; sourceTree = "<group>"; };
+		E49002652C86645F006DD1DE /* Character+isEmoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+isEmoji.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				E46EF30A2B361A8C00CDA3FE /* CGRect+center.swift */,
 				E48076C92B36E1D600B2FFDA /* CGOffset+.swift */,
 				E46EF3082B3615A900CDA3FE /* String+uniqued.swift */,
+				E49002652C86645F006DD1DE /* Character+isEmoji.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				E48076CA2B36E1D600B2FFDA /* CGOffset+.swift in Sources */,
 				E49002642C865F57006DD1DE /* PaletteEditor.swift in Sources */,
 				E48076D42B36EBCF00B2FFDA /* AnimatedActionButton.swift in Sources */,
+				E49002662C86645F006DD1DE /* Character+isEmoji.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
