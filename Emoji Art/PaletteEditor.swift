@@ -41,6 +41,12 @@ struct PaletteEditor: View {
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 40))]) {
                 ForEach(palette.emojis.uniqued.map(String.init), id: \.self) { emoji in
                     Text(emoji)
+                        .onTapGesture {
+                            withAnimation {
+                                palette.emojis.removeAll(where: { $0 == emoji.first! })
+                                emojisToAdd.removeAll(where: { $0 == emoji.first! })
+                            }
+                        }
                 }
             }
         }
