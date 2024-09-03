@@ -24,6 +24,9 @@ struct EditablePaletteList: View {
                 .onDelete { indexSet in
                     store.palettes.remove(atOffsets: indexSet)
                 }
+                .onMove { indexSet, newOffset in
+                    store.palettes.move(fromOffsets: indexSet, toOffset: newOffset)
+                }
             }
             .navigationDestination(for: Palette.self) { palette in
                 PaletteView(palette: palette)
