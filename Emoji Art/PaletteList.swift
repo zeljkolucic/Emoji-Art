@@ -10,6 +10,8 @@ import SwiftUI
 struct EditablePaletteList: View {
     @EnvironmentObject private var store: PaletteStore
     
+    @State private var showCursorPalette = false
+    
     var body: some View {
         NavigationStack {
             List {
@@ -28,10 +30,18 @@ struct EditablePaletteList: View {
                     store.palettes.move(fromOffsets: indexSet, toOffset: newOffset)
                 }
             }
-            .navigationDestination(for: Palette.self) { palette in
-                PaletteView(palette: palette)
+            .navigationDestination(isPresented: $showCursorPalette) {
+                PaletteEditor(palette: $store.palettes[store.cursorIndex])
             }
             .navigationTitle("\(store.name) Palette")
+            .toolbar {
+                Button {
+                    store.insert(name: "", emojis: "")
+                    showCursorPalette = true
+                } label: {
+                    Image(systemName: "plus")
+                }
+            }
         }
     }
 }
