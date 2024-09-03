@@ -11,10 +11,8 @@ struct PaletteList: View {
     @EnvironmentObject private var store: PaletteStore
     
     var body: some View {
-        List {
-            ForEach(store.palettes) { palette in
-                Text(palette.name)
-            }
+        List(store.palettes) { palette in
+            Text(palette.name)
         }
     }
 }
