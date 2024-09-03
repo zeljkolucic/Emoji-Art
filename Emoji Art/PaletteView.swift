@@ -14,8 +14,13 @@ struct PaletteView: View {
         VStack {
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 40))]) {
                 ForEach(palette.emojis.uniqued.map(String.init), id: \.self) { emoji in
-                    Text(emoji)
+                    NavigationLink(value: emoji) {
+                        Text(emoji)
+                    }
                 }
+            }
+            .navigationDestination(for: String.self) { emoji in
+                Text(emoji).font(.system(size: 300))
             }
             Spacer()
         }
