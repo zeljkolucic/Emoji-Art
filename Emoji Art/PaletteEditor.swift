@@ -11,6 +11,12 @@ struct PaletteEditor: View {
     @Binding var palette: Palette
     
     @State private var emojisToAdd: String = ""
+    @FocusState private var focused: Focused?
+    
+    enum Focused {
+        case name
+        case addEmojis
+    }
     
     private let emojiFont = Font.system(size: 40)
     
@@ -18,11 +24,13 @@ struct PaletteEditor: View {
         Form {
             Section {
                 TextField("Name", text: $palette.name)
+                    .focused($focused, equals: .name)
             } header: {
                 Text("Name")
             }
             Section {
                 TextField("Add Emojis Here", text: $emojisToAdd)
+                    .focused($focused, equals: .addEmojis)
                     .font(emojiFont)
                     .onChange(of: emojisToAdd) { emojisToAdd in
                         palette.emojis = (emojisToAdd + palette.emojis).filter { $0.isEmoji }.uniqued
@@ -33,6 +41,13 @@ struct PaletteEditor: View {
             }
         }
         .frame(minWidth: 300, minHeight: 350)
+        .onAppear {
+            if palette.name.isEmpty {
+                focused = .name
+            } else {
+                focused = .addEmojis
+            }
+        }
     }
     
     private var removeEmojis: some View {
