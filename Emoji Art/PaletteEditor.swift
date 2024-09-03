@@ -68,7 +68,8 @@ struct PaletteEditor: View {
         .font(emojiFont)
     }
 }
-//
-//#Preview {
-//    PaletteEditor()
-//}
+
+#Preview {
+    @State var palette = PaletteStore(named: "Preview").palettes.first!
+    return PaletteEditor(palette: $palette)
+}
