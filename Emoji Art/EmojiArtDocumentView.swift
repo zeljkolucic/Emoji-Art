@@ -40,8 +40,14 @@ struct EmojiArtDocumentView: View {
                     .offset(pan + gesturePan)
             }
             .gesture(panGesture.simultaneously(with: zoomGesture))
+            .onTapGesture(count: 2) {
+                zoomToFit(document.bbox, in: geometry)
+            }
             .dropDestination(for: Sturldata.self) { sturldatas, location in
                 return drop(sturldatas, at: location, in: geometry)
+            }
+            .onChange(of: document.background.uiImage) { _, newValue in
+                zoomToFit(newValue?.size, in: geometry)
             }
             .onChange(of: document.background.failureReason) { _, newValue in
                 showBackgroundFailureAlert = newValue != nil
@@ -57,6 +63,27 @@ struct EmojiArtDocumentView: View {
                     Text(reason)
                 }
             )
+        }
+    }
+    
+    private func zoomToFit(_ size: CGSize?, in geometry: GeometryProxy) {
+        if let size {
+            zoomToFit(CGRect(center: .zero, size: size), in: geometry)
+        }
+    }
+    
+    private func zoomToFit(_ rect: CGRect, in geometry: GeometryProxy) {
+        withAnimation {
+            if rect.size.width > 0, rect.size.height > 0,
+               geometry.size.width > 0, geometry.size.height > 0 {
+                let hZoom = geometry.size.width / rect.size.width
+                let vZoom = geometry.size.height / rect.size.height
+                zoom = min(hZoom, vZoom)
+                pan = CGOffset(
+                    width: -rect.midX * zoom,
+                    height: -rect.midY * zoom
+                )
+            }
         }
     }
     
