@@ -25,6 +25,7 @@
 		E49002662C86645F006DD1DE /* Character+isEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49002652C86645F006DD1DE /* Character+isEmoji.swift */; };
 		E49002682C86DC6F006DD1DE /* PaletteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49002672C86DC6F006DD1DE /* PaletteList.swift */; };
 		E490026A2C86DE88006DD1DE /* PaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49002692C86DE88006DD1DE /* PaletteView.swift */; };
+		E490026C2C86E478006DD1DE /* PaletteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E490026B2C86E478006DD1DE /* PaletteManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		E49002652C86645F006DD1DE /* Character+isEmoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+isEmoji.swift"; sourceTree = "<group>"; };
 		E49002672C86DC6F006DD1DE /* PaletteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteList.swift; sourceTree = "<group>"; };
 		E49002692C86DE88006DD1DE /* PaletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteView.swift; sourceTree = "<group>"; };
+		E490026B2C86E478006DD1DE /* PaletteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				E49002632C865F57006DD1DE /* PaletteEditor.swift */,
 				E49002672C86DC6F006DD1DE /* PaletteList.swift */,
 				E49002692C86DE88006DD1DE /* PaletteView.swift */,
+				E490026B2C86E478006DD1DE /* PaletteManager.swift */,
 				E48076D32B36EBCF00B2FFDA /* AnimatedActionButton.swift */,
 				E46EF30C2B36210B00CDA3FE /* Sturldata.swift */,
 				E49002622C865F14006DD1DE /* Helpers */,
@@ -200,6 +203,7 @@
 				E49002682C86DC6F006DD1DE /* PaletteList.swift in Sources */,
 				E46EF30B2B361A8C00CDA3FE /* CGRect+center.swift in Sources */,
 				E48076CA2B36E1D600B2FFDA /* CGOffset+.swift in Sources */,
+				E490026C2C86E478006DD1DE /* PaletteManager.swift in Sources */,
 				E49002642C865F57006DD1DE /* PaletteEditor.swift in Sources */,
 				E48076D42B36EBCF00B2FFDA /* AnimatedActionButton.swift in Sources */,
 				E49002662C86645F006DD1DE /* Character+isEmoji.swift in Sources */,
