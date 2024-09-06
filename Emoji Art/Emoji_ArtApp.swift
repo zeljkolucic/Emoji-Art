@@ -14,8 +14,8 @@ struct Emoji_ArtApp: App {
     
     var body: some Scene {
         WindowGroup {
-            PaletteManager(stores: [paletteStore])
-//            EmojiArtDocumentView(document: defaultDocument)
+//            PaletteManager(stores: [paletteStore])
+            EmojiArtDocumentView(document: defaultDocument)
                 .environmentObject(paletteStore)
         }
     }

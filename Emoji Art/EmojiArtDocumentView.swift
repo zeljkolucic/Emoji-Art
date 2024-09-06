@@ -30,6 +30,9 @@ struct EmojiArtDocumentView: View {
         GeometryReader { geometry in
             ZStack {
                 Color.white
+                if document.background.isFetching {
+                    ProgressView()
+                }
                 documentContents(in: geometry)
                     .scaleEffect(zoom * gestureZoom)
                     .offset(pan + gesturePan)
@@ -69,18 +72,10 @@ struct EmojiArtDocumentView: View {
     
     @ViewBuilder
     private func documentContents(in geometry: GeometryProxy) -> some View {
-        AsyncImage(url: document.background) { phase in
-            if let image = phase.image {
-                image
-            } else if let url = document.background {
-                if phase.error != nil {
-                    Text("\(url)")
-                } else {
-                    ProgressView()
-                }
-            }
+        if let uiImage = document.background.uiImage {
+            Image(uiImage: uiImage)
+                .position(Emoji.Position.zero.in(geometry))
         }
-        .position(Emoji.Position.zero.in(geometry))
         ForEach(document.emojis) { emoji in
             Text(emoji.string)
                 .font(emoji.font)
