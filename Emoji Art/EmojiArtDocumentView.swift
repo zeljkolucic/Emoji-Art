@@ -16,7 +16,7 @@ struct EmojiArtDocumentView: View {
     
     private let emojis = "👻🍎😃🤪☹️🤯🐶🐭🦁🐵🦆🐝🐢🐄🐖🌲🌴🌵🍄🌞🌎🔥🌈🌧️🌨️☁️⛄️⛳️🚗🚙🚓🚲🛺🏍️🚘✈️🛩️🚀🚁🏰🏠❤️💤⛵️"
     
-    private let paletteEmojiSize: CGFloat = 40
+    @ScaledMetric private var paletteEmojiSize: CGFloat = 40
     
     var body: some View {
         VStack(spacing: 0) {
