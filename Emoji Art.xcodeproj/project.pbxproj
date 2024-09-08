@@ -26,6 +26,7 @@
 		E49002682C86DC6F006DD1DE /* PaletteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49002672C86DC6F006DD1DE /* PaletteList.swift */; };
 		E490026A2C86DE88006DD1DE /* PaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49002692C86DE88006DD1DE /* PaletteView.swift */; };
 		E490026C2C86E478006DD1DE /* PaletteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E490026B2C86E478006DD1DE /* PaletteManager.swift */; };
+		E490026F2C8DD538006DD1DE /* UndoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E490026E2C8DD538006DD1DE /* UndoButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		E49002692C86DE88006DD1DE /* PaletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteView.swift; sourceTree = "<group>"; };
 		E490026B2C86E478006DD1DE /* PaletteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteManager.swift; sourceTree = "<group>"; };
 		E490026D2C8C945A006DD1DE /* Emoji-Art-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Emoji-Art-Info.plist"; sourceTree = SOURCE_ROOT; };
+		E490026E2C8DD538006DD1DE /* UndoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UndoButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				E46EF3022B36111400CDA3FE /* EmojiArt.swift */,
 				E46EF3042B3611F700CDA3FE /* EmojiArtDocument.swift */,
 				E46EF3062B36132D00CDA3FE /* EmojiArtDocumentView.swift */,
+				E490026E2C8DD538006DD1DE /* UndoButton.swift */,
 				E48076CB2B36E4FB00B2FFDA /* Palette.swift */,
 				E48076CD2B36E60000B2FFDA /* PaletteStore.swift */,
 				E48076D12B36E89300B2FFDA /* PaletteChooser.swift */,
@@ -195,6 +198,7 @@
 				E46EF3072B36132D00CDA3FE /* EmojiArtDocumentView.swift in Sources */,
 				E46EF3032B36111400CDA3FE /* EmojiArt.swift in Sources */,
 				E46EF2F52B3610B200CDA3FE /* Emoji_ArtApp.swift in Sources */,
+				E490026F2C8DD538006DD1DE /* UndoButton.swift in Sources */,
 				E46EF3092B3615A900CDA3FE /* String+uniqued.swift in Sources */,
 				E48076D22B36E89300B2FFDA /* PaletteChooser.swift in Sources */,
 				E46EF3052B3611F700CDA3FE /* EmojiArtDocument.swift in Sources */,
